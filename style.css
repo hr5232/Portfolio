@@ -1,0 +1,272 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo (Name: Hariom) */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6347; /* Makes it bold */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: underline; /* Underlines the navigation links */
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: url('images/background5.jpg') center/cover no-repeat;
+    background-size: cover; 
+    color: #f8fcfd;
+}
+
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+/* Animation for the name */
+@keyframes flyInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-name {
+    color: #18ea00; /* Green color for the name */
+    display: inline-block;
+    animation: flyInFromLeft 1s ease-out;
+}
+/* Add a class to trigger animation */
+.hero-name.fly {
+    animation: flyInFromLeft 1s ease-out;
+}
+
+
+/* Apply the animation to the .animated-name class */
+.animated-name {
+    display: inline-block;
+    animation: slideInFromLeft 1.5s ease-out forwards;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    background: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-text .btn:hover {
+    background: #e5533d;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+    animation: float 3s ease-in-out infinite; /* Adds smooth motion */
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px; /* Increased size from 400px to 500px */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Keyframes for Motion */
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px); /* Move slightly to the right */
+    }
+    100% {
+        transform: translateX(0); /* Back to original position */
+    }
+}
+
+
+
+/* About Section */
+#about, #skills, #projects, #contact {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Education Section */
+#education {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.education-list li {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #333;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+}
+
+/* Projects */
+.project {
+    margin: 1rem auto;
+    max-width: 600px;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    color: #ff6347;
+}
+
+/* Contact */
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form .btn {
+    padding: 0.8rem 2rem;
+    background: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form .btn:hover {
+    background: #e5533d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sections to appear centered */
+section {
+    scroll-margin-top: 80px; /* Adjust based on the header's height */
+}
