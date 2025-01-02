@@ -1,11 +1,22 @@
-// Contact Form Submission
-document
-  .querySelector(".contact-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission
-    alert("Thank you for reaching out! I'll get back to you soon.");
-    this.reset(); // Reset the form
-  });
+// Single event listener for form submission
+document.querySelector(".contact-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  const myForm = e.target; // Get the form element
+  const formData = new FormData(myForm); // Create FormData object
+
+  // Send form data using fetch
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      alert("Thank you for reaching out! I'll get back to you soon.");
+      myForm.reset(); // Reset the form after successful submission
+    })
+    .catch((error) => alert("Oops! Something went wrong. Please try again."));
+});
 
 // JavaScript to trigger animation every 2 seconds
 document.addEventListener("DOMContentLoaded", function () {
