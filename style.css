@@ -119,6 +119,33 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
+/* Tagline Styling */
+.hero-text .tagline {
+    font-size: 1.2rem;
+    color: #ff6347;
+    font-style: italic;
+    margin: 10px 0 20px;
+}
+
+/* "View My Projects" Button Styling */
+.btn-projects {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 15px rgba(0, 114, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-projects:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    box-shadow: 0px 6px 20px rgba(0, 114, 255, 0.4);
+    transform: translateY(-2px);
+}
 
 .hero-text .btn {
     display: inline-block;
@@ -165,70 +192,304 @@ body {
 
 
 /* About Section */
-#about, #skills, #projects, #contact {
-    padding: 3rem 2rem;
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 3rem; /* Increased padding for larger box */
+    background-color: #eef2f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1000px; /* Increased max-width for a bigger box */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+    overflow: hidden; /* Smooth slide effect */
+}
+
+.about-photo {
+    flex: 1;
+    max-width: 200px; /* Reduced size of the photo */
+    transition: transform 0.5s ease;
+    margin-right: 2rem; /* Space between photo and text */
     text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
+.about-photo img {
+    width: 100%;
+    border-radius: 50%; /* Ensures photo stays circular */
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
 }
+
+.about-text {
+    flex: 2; /* Larger text area compared to photo */
+    text-align: left;
+    z-index: 2; /* Keeps it above the photo */
+    transition: transform 0.5s ease;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff6347; /* Changed color for "About Me" */
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Improved readability */
+}
+
+#about:hover .about-photo {
+    transform: translateX(-30px) scale(1.05); /* Moves photo slightly left and enlarges */
+}
+
+#about:hover .about-text {
+    transform: translateX(30px); /* Moves text slightly right */
+}
+
+#about:hover {
+    transform: scale(1.02); /* Slightly enlarges entire section */
+}
+
+
+
+
 
 /* Education Section */
 #education {
-    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: #eef2f3; /* Light gray-blue background for contrast */
     text-align: center;
+    color: #333;
+    border-radius: 10px; /* Rounded corners for uniform design */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 2rem auto;
+    max-width: 800px; /* Consistent width with the About section */
+}
+
+#education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6347; /* Highlighted title color */
 }
 
 .education-list {
     list-style: none;
     padding: 0;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
+    width: 100%; /* Full width for alignment */
+    max-width: 600px; /* Restrict the width of the list */
 }
 
 .education-list li {
+    font-size: 1.2rem;
+    line-height: 1.8; /* Improve text spacing */
+    color: #555; /* Slightly muted text for readability */
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: #fff; /* White background for individual items */
+    border-radius: 8px; /* Rounded corners for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 
-/* Skills */
-.skills-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+/* Skills Section */
+.skills {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #eef2f3, #f8fcfd);
+    text-align: center;
 }
 
-.skill {
-    background: #333;
-    color: white;
-    margin: 0.5rem;
-    padding: 0.7rem 1.5rem;
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: #ff6347;
+    display: block;
+    margin: 0.5rem auto;
     border-radius: 5px;
 }
 
-/* Projects */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    text-align: center;
+}
+
+.skill-card h3 {
+    font-size: 1.8rem;
+    color: #ff6347;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover h3 {
+    color: #333;
+}
+
+.skill-card:hover p {
+    color: #444;
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.underline {
+    width: 120px;
+    height: 3px;
+    background-color: #ff6347;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 2px;
+}
+
+.projects-grid,
+.more-projects-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
 .project {
-    margin: 1rem auto;
-    max-width: 600px;
-    text-align: left;
-    border: 1px solid #ddd;
-    padding: 1rem;
+    width: 300px;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a stronger shadow */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
 }
 
 .project h3 {
+    font-size: 1.2rem;
     color: #ff6347;
+    margin-bottom: 0.5rem;
 }
+
+.project p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+}
+
+.git-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.git-link img {
+    width: 19px;
+    height: 18px;
+    margin-right: 0.6rem;
+    display: inline-block;
+}
+
+.git-link:hover {
+    background-color: #ff6347;
+}
+
+.more-button {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-button:hover {
+    background-color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+
+
+
+
+
 
 /* Contact */
 form input, form textarea {

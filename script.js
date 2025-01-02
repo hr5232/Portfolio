@@ -15,3 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     heroName.classList.add("fly");
   }, 2000); // 2 seconds interval
 });
+
+document.getElementById("view-more").addEventListener("click", function () {
+  const moreProjects = document.querySelector(".more-projects-grid");
+  moreProjects.classList.toggle("hidden");
+  moreProjects.classList.toggle("visible");
+  this.textContent = moreProjects.classList.contains("hidden")
+    ? "View More"
+    : "View Less";
+});

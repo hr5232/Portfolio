@@ -17,6 +17,7 @@
         <nav class="navbar">
             <div class="logo">Hariom</div>
             <ul class="nav-links">
+
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
@@ -28,13 +29,15 @@
     </header>
 
    <!-- Hero Section -->
-<section id="hero">
+   <section id="hero">
     <div class="hero-content">
         <div class="hero-text">
             <h1>Hello,<br> I'm <span class="hero-name animated-name">Hariom Rauniyar</span></h1>
-            <p>Final year Computer Engineering Student passionate about technology and innovation.</p>
-           
+            <p>Final year Computer Engineering student driven by a passion for building impactful solutions at the intersection of technology and innovation.</p>
+            <p class="tagline">"Turning ideas into reality with code and creativity."</p>
+            <a href="#projects" class="btn-projects">View My Projects</a>
         </div>
+        
         <div class="hero-image">
             <img src="images/pic1.png" alt="Hariom Rauniyar" />
         </div>
@@ -42,52 +45,131 @@
 </section>
 
 
+
     <!-- About Section -->
-    <section id="about">
+<section id="about" class="about-container">
+    <div class="about-photo">
+        <img src="images/me.jpg" alt="Hariom Rauniyar" />
+    </div>
+    <div class="about-text">
         <h2>About Me</h2>
         <p>
-            I am Hariom Rauniyar, a self-motivated and adaptable final year Computer Engineering student. I have quality skills in problem-solving, voice authentication systems, and full-stack development. I love learning and exploring new technologies to create innovative solutions.
+            Hello! I'm <strong>Hariom Rauniyar</strong>, a passionate and driven final-year Computer Engineering student with a knack for creating impactful solutions. My expertise lies in problem-solving and full-stack development. 
         </p>
-    </section>
+        <p>
+            I thrive at the intersection of innovation and technology, constantly exploring new tools and techniques to enhance my skills. Whether it's developing web or mobile applications, building AI-driven systems, or tackling challenging problems, I'm always ready to push boundaries and deliver results.
+        </p>
+        <p>
+            Beyond coding, I enjoy collaborating on meaningful projects and turning ideas into reality. Let’s innovate and make a difference together!
+        </p>
+    </div>
+    
+</section>
+
+
 
     <!-- Education Section -->
     <section id="education">
         <h2>Education</h2>
         <ul class="education-list">
-            <li><strong>Bachelor's in Computer Engineering</strong> - XYZ University (2020-2024)</li>
-            <li><strong>High School</strong> - ABC School (2018-2020)</li>
-            <li><strong>Secondary School</strong> - DEF School (2016-2018)</li>
+            <li><strong>Bachelor's in Computer Engineering</strong> - Advanced College of Engineering & Management (2021-Present)</li>
+            <li><strong>High School</strong> - National Infotech College (2017-2019)</li>
         </ul>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Flutter</div>
-            <div class="skill">Voice Authentication</div>
-            <div class="skill">Python</div>
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h3>Mobile App Development</h3>
+                <p>Flutter, Dart</p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend & Databases</h3>
+                <p>Python, MySQL, Firebase</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Github, VS Code, Figma, MS office</p>
+            </div>
         </div>
     </section>
+    
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Voice Authenticated Healthcare App</h3>
-            <p>
-                A complete health app with features like voice authentication, appointment booking, medicine reminders, and secure report uploads using blockchain.
-            </p>
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="underline"></div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="images/app.png" alt="Smart Health" class="project-image">
+                <h3>Smart Health : A blockchain based eHealthCare app with voice-authentication</h3>
+                <p>A health app using Flutter (Dart) that enables
+                    patients to book appointments, set reminders,
+                    and securely upload medical reports using AES
+                    encryption, IPFS and Solana blockchain.</p>
+                <a href="https://github.com/hr5232/Smart_Health_" target="_blank" class="git-link">
+                    <img src="images/github_logo.png" alt="GitHub" class="git-logo"> View on GitHub
+                </a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="images/brain.png" alt="Brain Tumor Detection" class="project-image">
+                <h3>Brain Tumor Detection</h3>
+                <p>A website that detects brain tumor types from
+                    MRI images using TensorFlow and a trained CNN
+                    model.
+                    </p>
+                <a href="https://github.com/hr5232/Brain-Tumor-Classfication-Project" target="_blank" class="git-link">
+                    <img src="images/github_logo.png" alt="GitHub" class="git-logo"> View on GitHub
+                </a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project">
+                <img src="images/maze.png" alt="Maze" class="project-image">
+                <h3>Maze: Computer Graphics</h3>
+                <p>A simple 2D game developed in C, showcasing
+                    foundational computer graphics concepts like
+                    transformations and animations.</p>
+                <a href="https://github.com/hr5232/Amazing_Maze" target="_blank" class="git-link">
+                    <img src="images/github_logo.png" alt="GitHub" class="git-logo"> View on GitHub
+                </a>
+            </div>
         </div>
-        <div class="project">
-            <h3>Smart Reminder App</h3>
-            <p>A Flutter-based app for setting medicine reminders with notifications and alarms.</p>
+        <button id="view-more" class="more-button">View More</button>
+        <div class="more-projects-grid hidden">
+            <!-- Project 4 -->
+            <div class="project">
+                <img src="images/videocall.jpg" alt="Maze" class="project-image">
+                <h3>Video-calling app</h3>
+                <p>A Flutter-based app utilizing Agora SDK for
+                    seamless real-time video calls with low-latency
+                    communication.</p>
+                <a href="https://github.com/hr5232/Video-Calling-App" target="_blank" class="git-link">
+                    <img src="images/github_logo.png" alt="GitHub" class="git-logo"> View on GitHub
+                </a>
+            </div>
+            <!-- Project 5 -->
+            <div class="project">
+                <img src="images/reminder.jpg" alt="Maze" class="project-image">
+                <h3>Medicine Reminder App</h3>
+                <p>A Flutter app that uses Local Notifications to send
+                    timely reminders for scheduled medications.</p>
+                <a href="https://github.com/hr5232/reminder_app" target="_blank" class="git-link">
+                    <img src="images/github_logo.png" alt="GitHub" class="git-logo"> View on GitHub
+                </a>
+            </div>
         </div>
     </section>
-
+    
+    
+    
+    
+    
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
