@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Include Font Awesome CDN in your <head> tag -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+rel="stylesheet"
+/>
 </head>
 <body>
     <!-- Header Section -->
@@ -22,6 +27,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certificates">Achievements</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -98,11 +104,64 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Achievements Section -->
+  <section id="certificates" class="certificates-section">
+    <h2>My Achievements</h2>
+    <div class="certificates-container">
+      <!-- Individual Certificates -->
+      <div class="certificate">
+        <img
+          src="images/certi1.jpg"
+          alt="Certificate 1"
+          class="certificate-thumbnail"
+          data-full="images/certi1.jpg"
+        />
+      </div>
+      <div class="certificate">
+        <img
+          src="images/certi2.jpg"
+          alt="Certificate 2"
+          class="certificate-thumbnail"
+          data-full="images/certi2.jpg"
+        />
+      </div>
+      <div class="certificate">
+        <img
+          src="images/certi3.jpg"
+          alt="Certificate 3"
+          class="certificate-thumbnail"
+          data-full="images/certi3.jpg"
+        />
+      </div>
+      <div class="certificate">
+        <img
+          src="images/certi4.jpg"
+          alt="Certificate 4"
+          class="certificate-thumbnail"
+          data-full="images/certi4.jpg"
+        />
+      </div>
+      <div class="certificate">
+        <img
+          src="images/certi5.jpg"
+          alt="Certificate 5"
+          class="certificate-thumbnail"
+          data-full="images/certi5.jpg"
+        />
+      </div>
+    </div>
+    <!-- Lightbox/Modal -->
+    <div id="lightbox" class="lightbox hidden">
+      <span id="close-lightbox">&times;</span>
+      <img id="lightbox-image" src="" alt="Certificate Full View" />
+    </div>
+  </section>
     
 
     <section id="projects" class="projects">
         <h2>My Projects</h2>
-        <div class="underline"></div>
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project">
@@ -169,17 +228,53 @@
     
     
     
-    
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <!-- Contact Details -->
+      <div class="contact-details">
+        <p>
+          <i class="fas fa-envelope"></i> 
+          <a href="mailto:hariomkumarrauniyar@gmail.com" target="_blank">
+            hariomkumarrauniyar@gmail.com
+          </a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i> 
+          <a href="tel:+9845610390" target="_blank">+977-9845610390</a>
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/hariom.rauniyar.52" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://github.com/hr5232" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/hariom-rauniyar-22b145229/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/_hariom_rauniyar_/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <a href="resume/resume.pdf" class="download-btn" download>
+          <i class="fas fa-file-download"></i> Download CV
+        </a>
+      </div>
+  
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+      
 
     <!-- Footer -->
     <footer>
