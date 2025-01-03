@@ -66,7 +66,6 @@ body {
     color: #f8fcfd;
 }
 
-
 .hero-content {
     display: flex;
     justify-content: space-between;
@@ -102,7 +101,6 @@ body {
 .hero-name.fly {
     animation: flyInFromLeft 1s ease-out;
 }
-
 
 /* Apply the animation to the .animated-name class */
 .animated-name {
@@ -175,7 +173,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* Keyframes for Motion */
 @keyframes float {
     0% {
@@ -188,8 +185,6 @@ body {
         transform: translateX(0); /* Back to original position */
     }
 }
-
-
 
 /* About Section */
 #about {
@@ -252,10 +247,6 @@ body {
     transform: scale(1.02); /* Slightly enlarges entire section */
 }
 
-
-
-
-
 /* Education Section */
 #education {
     display: flex;
@@ -296,8 +287,6 @@ body {
     border-radius: 8px; /* Rounded corners for list items */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
-
 
 /* Skills Section */
 .skills {
@@ -391,7 +380,6 @@ section h2 {
     width: 80%; /* Expands underline on hover */
   }
   
-
 /* Certificates Section Styling */
 .certificates-section {
     padding: 50px 20px;
@@ -476,7 +464,6 @@ section h2 {
     color: #f00;
   }
   
-
 /* Projects Section */
 .projects {
     padding: 2rem;
@@ -567,7 +554,6 @@ section h2 {
   .github-button:hover {
     background-color: #ff6347; /* Darker shade on hover */
   }
-  
 
 .more-button {
     margin-top: 1.5rem;
@@ -592,11 +578,6 @@ section h2 {
 .visible {
     display: flex;
 }
-
-
-
-
-
 
 /* Contact Section */
 .contact-section {
@@ -718,8 +699,6 @@ section h2 {
     transform: scale(1.05);
   }
   
-  
-
 /* Footer */
 footer {
     text-align: center;
